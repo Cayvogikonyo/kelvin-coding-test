@@ -14,7 +14,7 @@
         <transition enter-active-class="transition duration-500 ease-out" enter-from-class="transform scale-95 opacity-0"
           enter-to-class="transform scale-100 opacity-100" leave-active-class="transition duration-75 ease-out"
           leave-from-class="transform scale-100 opacity-100" leave-to-class="transform scale-95 opacity-0">
-          <DisclosurePanel as="dd" class="pr-12">
+          <DisclosurePanel as="dd" class="md:pr-12">
             <standards :standards="sub_domain.standards" />
           </DisclosurePanel>
         </transition>

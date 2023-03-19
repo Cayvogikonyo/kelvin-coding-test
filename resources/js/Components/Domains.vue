@@ -18,7 +18,7 @@
             leave-from-class="transform scale-100 opacity-100"
             leave-to-class="transform scale-95 opacity-0"
             >
-                <DisclosurePanel as="dd" class="pr-12">
+                <DisclosurePanel as="dd" class="md:pr-12">
                     <sub-domains :subDomains="domain.sub_domains" />
                 </DisclosurePanel>
             </transition>
