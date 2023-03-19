@@ -16,6 +16,9 @@ const actions = {
   },
   removeItemFromStandards({ state, commit }, standard) {
     commit('removeItemFromStandards', { standard })
+  },
+  clearStandards({ state, commit }) {
+    commit('clearStandards')
   }
 }
 
@@ -33,6 +36,9 @@ const mutations = {
     if (state.items.includes(standard)) { //affirm object exists
       state.items.splice(state.items.indexOf(standard), 1);
     }
+  },
+  clearStandards(state){
+    state.items = [];
   }
 }
 
