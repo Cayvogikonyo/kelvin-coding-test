@@ -47,7 +47,7 @@
 
                     <h1 class="text-2xl font-bold mt-10 mb-3">Click on any subject below to get started</h1>
 
-                    <div class="md:flex flex-wrap">
+                    <div class="flex flex-wrap flex-col-reverse md:flex-row">
                         
                         <div class="w-full md:w-7/12">
                             <div class="rounded-md border-2 px-6 pb-6 mb-10">
@@ -79,7 +79,7 @@
     
     
                         <div class="w-full md:w-5/12 relative">
-                            <div class="md:sticky md:top-0 px-3">
+                            <div class="md:sticky md:top-0 px-3 py-3 shadow md:shadow-none my-2 md:my-0 md:py-0">
                                 <div v-if="selectedStandards.length">
                                     <div class="mb-8">
                                         <h1 class="text-3xl font-bold">
