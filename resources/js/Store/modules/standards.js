@@ -11,16 +11,21 @@ const getters = {
 
 // actions
 const actions = {
-  addItemToStandards ({ state, commit }, standard) {
-        commit('addItemToStandards', { standard })
-    }
+  addItemToStandards({ state, commit }, standard) {
+    commit('addItemToStandards', { standard })
+  }
 }
 
 // mutations
 const mutations = {
-    addItemToStandards (state, { standard }) {
-        state.items.push(standard)
+  addItemToStandards(state, { standard }) {
+    if (state.items.includes(standard)) {
+      state.items.splice(state.items.indexOf(standard), 1);
+    } else {
+      state.items.push(standard)
     }
+
+  }
 }
 
 export default {
