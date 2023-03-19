@@ -101,7 +101,7 @@
                                                 <p class="text-sm text-gray-500">{{ standard.description }}</p>
                                             </div>
                                             <div>
-                                                <a @click.prevent="removeStandard" href="#"
+                                                <a @click.prevent="removeStandard(standard)" href="#"
                                                     class="inline-flex items-center rounded-full bg-white px-3 py-1 text-xs font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:ring-red-200 hover:bg-red-100 hover:text-red-500">
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                                         stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-3">
@@ -165,7 +165,9 @@ export default {
     },
     methods: {
         // Implement these methods:
-        removeStandard() { },
+        removeStandard(standard) {
+            this.$store.dispatch('standards/removeItemFromStandards', standard)
+        },
         clearAllStandards() { },
     },
     created() {

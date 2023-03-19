@@ -13,6 +13,9 @@ const getters = {
 const actions = {
   addItemToStandards({ state, commit }, standard) {
     commit('addItemToStandards', { standard })
+  },
+  removeItemFromStandards({ state, commit }, standard) {
+    commit('removeItemFromStandards', { standard })
   }
 }
 
@@ -25,6 +28,11 @@ const mutations = {
       state.items.push(standard)
     }
 
+  },
+  removeItemFromStandards(state, { standard }) {
+    if (state.items.includes(standard)) { //affirm object exists
+      state.items.splice(state.items.indexOf(standard), 1);
+    }
   }
 }
 
